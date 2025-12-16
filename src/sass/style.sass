@@ -1,0 +1,624 @@
+@font-face
+    font-family: "Junge-Regular"
+    src: url(../fonts/Junge-Regular.woff2)
+    font-weight: 400
+@font-face
+    font-family: "Inter-Bold"
+    src: url(../fonts/Inter-Bold.woff2)
+    font-weight: 700
+
+$primary-color: #682A2A
+$secondary-color: #746868
+$footer-color: #4A4343
+$text-color: #FFFFFF
+
+*
+    box-sizing: border-box
+
+body
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+
+.header
+    height: 100px
+    width: 100%
+    justify-items: center
+    background-color: $primary-color
+    &__nav
+        height: 100%
+        width: 80%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        &-logo
+            height: 80px
+            width: 150px
+        &-hamburger
+            display: none
+            flex-direction: column
+            justify-content: space-between
+            width: 30px
+            height: 21px
+            background: transparent
+            border: none
+            cursor: pointer
+            padding: 0
+            z-index: 1000
+            span
+                display: block
+                height: 3px
+                width: 100%
+                background-color: $text-color
+                border-radius: 3px
+                transition: all 0.3s ease
+        &-bar
+            width: 50%
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            transition: all 0.3s ease
+            a
+                font-family: Inter-Bold
+                font-size: 24px
+                color: $text-color
+                text-decoration: none
+
+.footer
+    height: 215px
+    width: 100%
+    justify-items: center
+    background-color: $footer-color
+    &__nav
+        padding: 20px 0px 20px 0px
+        height: 100%
+        width: 80%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        &-cont
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &--title
+                color: $text-color
+                font-family: Inter-Bold
+                font-size: 28px
+            &--number
+                color: $text-color
+                font-family: Junge-Regular
+                font-size: 15px
+            &--subtitle
+                color: $text-color
+                font-family: Junge-Regular
+                font-size: 15px
+            ul
+                display: flex
+                flex-direction: row
+                li  
+                    margin-right: 10px
+        &-logo
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            &--policies
+                color: $secondary-color
+                font-family: Junge-Regular
+                font-size: 13px
+
+
+.main
+    width: 100%
+    background-color: $secondary-color
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-around
+    //главная
+    &__section
+        align-items: center
+        height: 1000px
+        width: 80%
+        display: flex
+        flex-direction: column
+        text-align: center
+        justify-content: space-around
+        &-banner
+            display: flex
+            flex-direction: column
+            align-items: center
+            img
+                width: 150%
+            p
+                font-family: Junge-Regular
+                font-size: 15px
+                color: $text-color 
+        &-group
+            justify-content: center
+            width: 100%
+            display: flex
+            flex-direction: row
+            align-items: center  
+        &-smallgroup
+            width: 25%
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-evenly
+            &--product
+                display: flex
+                justify-content: space-between
+                flex-direction: column
+                height: 210px
+                width: 160px
+                background-color: #682A2A
+                border: solid 1px black
+                border-radius: 12px
+                font-family: Junge-Regular
+                margin-bottom: 20px
+                text-align: center
+                color: $text-color
+                p
+                    margin-bottom: 20px
+            &--img  
+                height: 160px
+                width: 160px
+                border: solid 2px black
+                border-radius: 12px
+                background-color: #fff
+                 
+    //новости
+    &__news
+        height: 500px
+        width: 80%
+        display: flex
+        flex-direction: column
+        &-title
+            text-align: center
+            color: $text-color
+            font-family: Inter-Bold
+            font-size: 24px
+            margin-bottom: 30px
+        &-list
+            list-style: circle
+            &--element
+                color: $text-color
+                font-family: Inter-Bold
+                font-size: 24px
+                margin-bottom: 20px
+    //контакты
+    &__contacts
+        height: 500px
+        width: 80%
+        display: flex
+        flex-direction: column
+        &-title
+            text-align: center
+            color: $text-color
+            font-family: Inter-Bold
+            font-size: 24px
+            margin-bottom: 30px
+        &-list
+            list-style: circle
+            &--element
+                color: $text-color
+                font-family: Inter-Bold
+                font-size: 24px
+                margin-bottom: 20px
+    //корзина
+    &__cart
+        align-items: center
+        height: 600px
+        width: 80%
+        display: flex
+        flex-direction: column
+        text-align: center
+        align-content: center
+        &-title
+            color: $text-color
+            font-family: Inter-Bold
+            font-size: 24px
+            margin-bottom: 30px
+        &-group
+            display: flex
+            flex-direction: column
+        &-sgroup
+            margin-bottom: 20px
+            background-color: $text-color
+            justify-content: space-around
+            align-items: center
+            height: 135px
+            width: 500px
+            display: flex
+            flex-direction: row
+            &--img
+                height: 100px
+                width: 100px
+                border: 1px solid
+                border-radius: 12px
+            &--name
+                font-family: Junge-Regular
+                font-size: 15px
+            &--count
+                font-family: Junge-Regular
+                font-size: 15px
+        &-button
+            margin-top: 100px
+            width: 350px
+            height: 100px
+            background-color: $primary-color
+            border: none
+            a
+                text-decoration: none
+                color: $text-color
+                font-family: Junge-Regular
+                font-size: 15px
+    //скидки
+    &__sales
+        align-items: center
+        height: 600px
+        width: 80%
+        display: flex
+        flex-direction: column
+        text-align: center
+        justify-content: space-evenly
+        &-product
+            display: flex
+            justify-content: space-between
+            flex-direction: column
+            height: 210px
+            width: 160px
+            background-color: #682A2A
+            border: solid 1px black
+            border-radius: 12px
+            &--img  
+                height: 160px
+                width: 160px
+                border: solid 2px black
+                border-radius: 12px
+                background-color: #fff
+            &--title
+                font-family: Junge-Regular
+                margin-bottom: 20px
+                text-align: center
+                color: $text-color   
+        &-title
+            font-family: Inter-Bold
+            font-size: 24px
+            color: $text-color
+        &-subtitle
+            font-family: Inter-Bold
+            font-size: 24px
+            color: $text-color
+        &-sale
+            font-family: Inter-Bold
+            font-size: 24px
+            color: $text-color
+        &-comment
+            background-color: $text-color
+            width: 425px
+            height: 125px
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            align-items: center
+            &--user
+                display: flex
+                flex-direction: column
+                img
+                    height: 50px
+                    width: 50px
+                    margin-bottom: 10px
+                p
+                    font-family: Inter-Bold
+                    font-size: 15px
+            &--com
+                font-family: Inter-Bold
+                font-size: 15px
+
+// ================== АДАПТИВ ==================
+
+// Планшеты (ширина до 1024px)
+@media (max-width: 1024px)
+    .header
+        height: 80px
+        &__nav
+            width: 90%
+            &-logo
+                height: 60px
+                width: 120px
+            &-bar
+                width: 60%
+                a
+                    font-size: 18px
+    
+    .footer
+        height: 180px
+        &__nav
+            width: 90%
+            &-cont
+                &--title
+                    font-size: 22px
+                &--number, &--subtitle
+                    font-size: 13px
+    
+    .main
+        &__section
+            width: 90%
+            height: auto
+            padding: 30px 0
+            &-banner
+                img
+                    width: 120%
+                p
+                    font-size: 14px
+            &-group
+                flex-wrap: wrap
+                justify-content: center
+            &-smallgroup
+                width: 33.333%
+                flex-direction: column
+                &--product
+                    height: 180px
+                    width: 140px
+                    margin: 10px
+                &--img
+                    height: 140px
+                    width: 140px
+        
+        &__news, &__contacts
+            width: 90%
+            height: auto
+            padding: 40px 0
+            &-title
+                font-size: 22px
+            &-list--element
+                font-size: 18px
+        
+        &__cart
+            width: 90%
+            height: auto
+            padding: 40px 0
+            &-sgroup
+                width: 400px
+                height: 120px
+                &--img
+                    height: 90px
+                    width: 90px
+            &-button
+                width: 300px
+                height: 80px
+                margin-top: 50px
+        
+        &__sales
+            width: 90%
+            height: auto
+            padding: 40px 0
+            &-product
+                height: 180px
+                width: 140px
+                &--img
+                    height: 140px
+                    width: 140px
+            &-comment
+                width: 350px
+                height: 110px
+
+// Мобильные устройства (ширина до 768px)
+@media (max-width: 768px)
+    // Гамбургер меню стили
+    .header
+        height: 70px
+        position: relative
+        &__nav
+            width: 95%
+            flex-direction: row
+            justify-content: space-between
+            &-logo
+                height: 50px
+                width: 100px
+                margin-bottom: 0
+            &-hamburger
+                display: flex
+                &.active
+                    span:nth-child(1)
+                        transform: rotate(45deg) translate(6px, 6px)
+                    span:nth-child(2)
+                        opacity: 0
+                    span:nth-child(3)
+                        transform: rotate(-45deg) translate(7px, -7px)
+            &-bar
+                position: fixed
+                top: 70px
+                left: 0
+                width: 100%
+                height: 0
+                background-color: $primary-color
+                flex-direction: column
+                align-items: center
+                justify-content: flex-start
+                overflow: hidden
+                transition: height 0.3s ease
+                padding: 0
+                z-index: 999
+                &.active
+                    height: calc(100vh - 70px)
+                    padding-top: 30px
+                li
+                    width: 100%
+                    text-align: center
+                    margin: 15px 0
+                    opacity: 0
+                    transform: translateY(-20px)
+                    transition: all 0.3s ease 0.1s
+                    &.show
+                        opacity: 1
+                        transform: translateY(0)
+                a
+                    font-size: 20px
+                    display: block
+                    padding: 15px 0
+                    width: 100%
+                    &:hover
+                        background-color: darken($primary-color, 10%)
+    
+    .footer
+        height: 250px
+        &__nav
+            width: 95%
+            flex-direction: column
+            align-items: center
+            text-align: center
+            padding: 20px 0
+            &-cont
+                margin-bottom: 20px
+                align-items: center
+                &--title
+                    font-size: 20px
+                &--number, &--subtitle
+                    font-size: 12px
+                ul
+                    justify-content: center
+            &-logo
+                align-items: center
+                &--icon
+                    height: 60px
+                    width: 120px
+                &--policies
+                    font-size: 11px
+                    text-align: center
+    
+    .main
+        &__section
+            width: 95%
+            &-banner
+                img
+                    width: 100%
+                p
+                    font-size: 12px
+            &-group
+                flex-direction: column
+            &-smallgroup
+                width: 100%
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: center
+                &--product
+                    height: 160px
+                    width: 130px
+                    margin: 8px
+                &--img
+                    height: 130px
+                    width: 130px
+        
+        &__news, &__contacts
+            width: 95%
+            &-title
+                font-size: 20px
+            &-list--element
+                font-size: 16px
+                margin-bottom: 15px
+        
+        &__cart
+            width: 95%
+            &-sgroup
+                width: 300px
+                height: 100px
+                &--img
+                    height: 70px
+                    width: 70px
+                &--name, &--count
+                    font-size: 13px
+            &-button
+                width: 250px
+                height: 70px
+                a
+                    font-size: 13px
+        
+        &__sales
+            width: 95%
+            &-title, &-subtitle, &-sale
+                font-size: 20px
+            &-product
+                height: 160px
+                width: 130px
+                &--img
+                    height: 130px
+                    width: 130px
+                &--title
+                    font-size: 14px
+            &-comment
+                width: 280px
+                height: 100px
+                &--user
+                    img
+                        height: 40px
+                        width: 40px
+                    p
+                        font-size: 12px
+                &--com
+                    font-size: 12px
+
+// Маленькие мобильные (ширина до 480px)
+@media (max-width: 480px)
+    .header
+        height: 60px
+        &__nav
+            &-logo
+                height: 40px
+                width: 80px
+            &-bar
+                top: 60px
+                &.active
+                    height: calc(100vh - 60px)
+                a
+                    font-size: 18px
+    
+    .main
+        &__section
+            &-smallgroup--product
+                height: 140px
+                width: 120px
+                p
+                    font-size: 13px
+                &--img
+                    height: 120px
+                    width: 120px
+        
+        &__news, &__contacts
+            &-title
+                font-size: 18px
+            &-list--element
+                font-size: 14px
+        
+        &__cart
+            &-sgroup
+                width: 250px
+                height: 90px
+                &--img
+                    height: 60px
+                    width: 60px
+                &--name, &--count
+                    font-size: 12px
+            &-button
+                width: 200px
+                height: 60px
+                a
+                    font-size: 12px
+        
+        &__sales
+            &-title, &-subtitle, &-sale
+                font-size: 18px
+            &-product
+                height: 140px
+                width: 120px
+                &--img
+                    height: 120px
+                    width: 120px
+            &-comment
+                width: 250px
+                height: 90px
